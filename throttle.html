@@ -5,51 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style></style>
   </head>
   <body>
     <div class="result">
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
-      <p>30</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
+      <p>123</p>
     </div>
     <script>
       const result = document.querySelector(".result");
+
       function throttle(callback, time = 1000) {
         let timer;
-
         return function () {
           let context = this;
           let args = arguments;
-          
-          // 已經有計時器在執行了
           if (timer) {
             return;
           }
@@ -66,18 +63,17 @@
         let scrollTop = document.documentElement.scrollTop;
         let scrollHeight = document.documentElement.scrollHeight;
 
-        // console.log((scrollTop + clientHeight) / scrollHeight);
-        // console.log(Math.floor(scrollTop + clientHeight), scrollHeight);
-        if (Math.floor(scrollTop + clientHeight) == scrollHeight) {
+        console.log(scrollTop + clientHeight, scrollHeight);
+        if ((scrollTop + clientHeight) / scrollHeight >= 0.9) {
           console.log("bottom...");
           for (let i = 0; i <= 10; i++) {
             let p = document.createElement("p");
-            p.textContent = "new p";
-            console.log(p);
+            p.textContent = "456456";
             result.appendChild(p);
           }
         }
       }
+
       document.addEventListener("scroll", throttle(scroll));
     </script>
   </body>
